@@ -2,6 +2,7 @@
  A desktop application which gathers all your favourite programs under a single roof.
  
  You need to download the model file and put it on the project folder to be able to run Sound Analyzer.
+ 
  Model file: https://drive.google.com/file/d/1CIgXdf_zfFXEPYpSxLJm0fpaotOJRBP_/view?usp=sharing
  ## UML Diagram of the project: 
  
