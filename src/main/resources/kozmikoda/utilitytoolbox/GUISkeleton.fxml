@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Scene?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import javafx.stage.Stage?>
+
+<Stage fx:id="window" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kozmikoda.utilitytoolbox.GUIController">
+    <scene>
+        <Scene>
+         <Pane prefHeight="571.0" prefWidth="850.0" style="-fx-border-radius: 40; -fx-background-radius: 40;">
+            <children>
+               <ImageView fitHeight="571.0" fitWidth="982.0" onMouseDragged="#dragWindow" onMousePressed="#setWindowOffset" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@mainApp.png" />
+                  </image>
+               </ImageView>
+               <JFXButton layoutX="23.0" layoutY="22.0" opacity="0.0" />
+               <JFXButton layoutX="25.0" layoutY="88.0" onAction="#passwordSpaceChooseButton" prefHeight="65.0" prefWidth="257.0" ripplerFill="#616aa4" styleClass="passwordCaseChooserButton" stylesheets="@mainStyle.css" textFill="WHITE">
+                  <font>
+                     <Font size="1.0" />
+                  </font>
+               </JFXButton>
+               <JFXButton layoutX="23.0" layoutY="185.0" onAction="#soundAnalyzerChooseButton" prefHeight="68.0" prefWidth="257.0" ripplerFill="#616aa4" styleClass="soundAnalyzerChooserButton" stylesheets="@mainStyle.css" textFill="WHITE">
+                  <font>
+                     <Font size="1.0" />
+                  </font>
+               </JFXButton>
+               <JFXButton layoutX="120.0" layoutY="346.0" prefHeight="64.0" prefWidth="64.0" ripplerFill="#616aa4" styleClass="addAppButton" stylesheets="@mainStyle.css" textFill="WHITE">
+                  <font>
+                     <Font size="1.0" />
+                  </font>
+               </JFXButton>
+               <JFXButton layoutX="64.0" layoutY="482.0" onAction="#toolboxChooseButton" prefHeight="0.0" prefWidth="180.0" ripplerFill="#616aa4" styleClass="toolboxBottomRightButtonLogo" stylesheets="@mainStyle.css" textFill="WHITE">
+                  <font>
+                     <Font size="1.0" />
+                  </font>
+               </JFXButton>
+               <Pane fx:id="toolboxInfoPane" layoutX="313.0" layoutY="45.0" prefHeight="225.0" prefWidth="387.0">
+                  <children>
+                     <ImageView fitHeight="157.0" fitWidth="653.0" layoutX="-54.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@toolBoxInfo.png" />
+                        </image>
+                     </ImageView>
+                     <ImageView fitHeight="109.0" fitWidth="241.0" layoutX="146.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@toolboxText.png" />
+                        </image>
+                     </ImageView>
+                  </children>
+               </Pane>
+               <Pane fx:id="passwordSpaceInfoPane" layoutX="313.0" layoutY="62.0" prefHeight="436.0" prefWidth="519.0" visible="false">
+                  <children>
+                     <ImageView fitHeight="65.0" fitWidth="242.0" layoutX="141.0" layoutY="-18.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@passwordSpaceText.png" />
+                        </image>
+                     </ImageView>
+                     <ImageView fitHeight="190.0" fitWidth="528.0" layoutX="3.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@passwordSpaceInfo.png" />
+                        </image>
+                     </ImageView>
+                     <JFXButton fx:id="passwordSpaceStartButtonLogo" layoutX="185.0" layoutY="235.0" onAction="#passwordSpaceStartButton" prefHeight="120.0" prefWidth="141.0" ripplerFill="#616aa4" styleClass="passwordCaseStarterButton" stylesheets="@mainStyle.css" textFill="WHITE">
+                        <font>
+                           <Font size="1.0" />
+                        </font>
+                     </JFXButton>
+                     <Label fx:id="passwdIsAliveLabel" layoutX="185.0" layoutY="367.0" prefHeight="64.0" prefWidth="153.0" text="Already Running" textFill="#5aba2d" visible="false">
+                        <font>
+                           <Font name="Agency FB" size="29.0" />
+                        </font>
+                     </Label>
+                  </children>
+               </Pane>
+               <Pane fx:id="soundAnalyzerInfoPane" layoutX="313.0" layoutY="58.0" prefHeight="424.0" prefWidth="504.0" visible="false">
+                  <children>
+                     <ImageView fitHeight="198.0" fitWidth="538.0" layoutX="4.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@soundAnalyzerInfo.png" />
+                        </image>
+                     </ImageView>
+                     <ImageView fitHeight="65.0" fitWidth="242.0" layoutX="140.0" layoutY="-10.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@soundAnalyzerText.png" />
+                        </image>
+                     </ImageView>
+                     <JFXButton fx:id="soundAnalyzerStartButtonLogo" layoutX="175.0" layoutY="218.0" onAction="#soundAnalyzerStartButton" prefHeight="107.0" prefWidth="154.0" ripplerFill="#616aa4" styleClass="soundAnalyzerStarterButton" stylesheets="@mainStyle.css" textFill="WHITE">
+                        <font>
+                           <Font size="1.0" />
+                        </font>
+                     </JFXButton>
+                     <Label fx:id="soundIsAliveLabel" layoutX="185.0" layoutY="347.0" prefHeight="64.0" prefWidth="153.0" text="Already Running" textFill="#5aba2d" visible="false">
+                        <font>
+                           <Font name="Agency FB" size="29.0" />
+                        </font>
+                     </Label>
+                  </children>
+               </Pane>
+               <Pane fx:id="soundAnalyzerPane" onMouseDragged="#dragWindow" onMousePressed="#setWindowOffset" prefHeight="571.0" prefWidth="850.0" style="-fx-background-color: #211126; -fx-border-color: #FFFFFF; -fx-border-width: 0.4; -fx-border-radius: 30; -fx-background-radius: 30;" visible="false">
+                  <children>
+                     <TextField fx:id="output" alignment="CENTER" editable="false" layoutX="257.0" layoutY="399.0" prefHeight="41.0" prefWidth="339.0" promptText=" " style="-fx-border-color: #b81484; -fx-background-color: #2A0033; -fx-background-insets: 0; -fx-border-radius: 20; -fx-background-radius: 20;" styleClass="text-input" stylesheets="@mainStyle.css" visible="false">
+                        <effect>
+                           <DropShadow height="38.59" radius="14.3975">
+                              <color>
+                                 <Color green="1.0" blue="0.8761904835700989" />
+                              </color>
+                           </DropShadow>
+                        </effect>
+                     </TextField>
+                     <Separator layoutX="51.0" layoutY="120.0" opacity="0.15" prefHeight="3.0" prefWidth="750.0" />
+                     <Separator layoutX="50.0" layoutY="500.0" opacity="0.15" prefHeight="3.0" prefWidth="750.0" />
+                     <Label alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="274.0" layoutY="54.0" prefHeight="21.0" prefWidth="303.0" text="SOUND ANALYZER" textFill="#ddd9d9">
+                        <font>
+                           <Font name="System Bold" size="33.0" />
+                        </font>
+                        <effect>
+                           <DropShadow height="11.53" radius="5.265" spread="0.36" width="11.53">
+                              <color>
+                                 <Color red="0.30908870697021484" green="0.6049991846084595" blue="0.7763158082962036" />
+                              </color>
+                           </DropShadow>
+                        </effect>
+                     </Label>
+                     <Label layoutX="99.0" layoutY="152.0" prefHeight="67.0" prefWidth="650.0" text="Find out what the sound is by selecting an audio file (only .wav extension for now) with a maximum length of 3 - 5 seconds." textAlignment="JUSTIFY" textFill="#d7d7d7" wrapText="true">
+                        <font>
+                           <Font name="Agency FB" size="25.0" />
+                        </font>
+                        <effect>
+                           <DropShadow height="26.86" radius="12.93" spread="0.42" width="26.86">
+                              <color>
+                                 <Color red="0.7647058963775635" green="0.0941176488995552" blue="0.7058823704719543" />
+                              </color>
+                           </DropShadow>
+                        </effect>
+                     </Label>
+                     <Label layoutX="101.0" layoutY="239.0" prefHeight="67.0" prefWidth="650.0" text="Currently definable sound classes: Air Conditioner, Car Horn, Children Playing, Dog Bark, Drilling, Engine Idling, Gun Shot, Jackhammer, Siren, Street Music." textAlignment="JUSTIFY" textFill="#d7d7d7" wrapText="true">
+                        <font>
+                           <Font name="Agency FB" size="25.0" />
+                        </font>
+                        <effect>
+                           <DropShadow height="26.86" radius="12.93" spread="0.38" width="26.86">
+                              <color>
+                                 <Color red="0.7647058963775635" green="0.0941176488995552" blue="0.7058823704719543" />
+                              </color>
+                           </DropShadow>
+                        </effect>
+                     </Label>
+                     <ProgressIndicator fx:id="analyzeBar" layoutX="399.0" layoutY="397.0" prefHeight="76.0" prefWidth="90.0" visible="false" />
+                     <Label fx:id="analyzeLabel" layoutX="353.0" layoutY="460.0" prefHeight="28.0" prefWidth="146.0" text="Analyzing the sound" textFill="WHITE" visible="false">
+                        <font>
+                           <Font name="Agency FB" size="23.0" />
+                        </font>
+                        <effect>
+                           <DropShadow>
+                              <color>
+                                 <Color red="0.09000000357627869" green="0.5926666855812073" blue="1.0" />
+                              </color>
+                           </DropShadow>
+                        </effect>
+                     </Label>
+                     <JFXButton fx:id="soundAnalyzerBackButton" layoutX="19.0" layoutY="29.0" onAction="#soundAnalyzerBackButtonAction" prefHeight="25.0" prefWidth="16.0" styleClass="backButton" stylesheets="@mainStyle.css" textFill="WHITE">
+                        <font>
+                           <Font size="1.0" />
+                        </font>
+                     </JFXButton>
+                     <JFXButton fx:id="selectFileButton" buttonType="RAISED" layoutX="351.0" layoutY="336.0" onAction="#selectFileButton" prefHeight="35.0" prefWidth="146.0" ripplerFill="WHITE" style="-fx-background-radius: 20;" styleClass="buttonJFX" stylesheets="@mainStyle.css" text="Select a Sound" textFill="WHITE">
+                        <font>
+                           <Font name="Agency FB" size="19.0" />
+                        </font>
+                     </JFXButton>
+                  </children>
+               </Pane>
+               <JFXButton layoutX="797.0" layoutY="21.0" onAction="#closeButton" prefHeight="27.0" prefWidth="15.0" ripplerFill="#fc4646" styleClass="closeButton" stylesheets="@mainStyle.css" textFill="WHITE">
+                  <font>
+                     <Font size="1.0" />
+                  </font>
+               </JFXButton>
+               <JFXButton layoutX="768.0" layoutY="21.0" onAction="#minimizeButton" prefHeight="27.0" prefWidth="15.0" ripplerFill="#668fe1" styleClass="minimizeButton" stylesheets="@mainStyle.css" textFill="WHITE">
+                  <font>
+                     <Font size="1.0" />
+                  </font>
+               </JFXButton>
+            </children>
+         </Pane>
+        </Scene>
+    </scene>
+</Stage>

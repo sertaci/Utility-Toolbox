@@ -1,0 +1,48 @@
+.backButton {
+     -fx-graphic: url(back.png);
+}
+
+.closeButton {
+    -fx-graphic: url(closeButton.png);
+}
+
+.minimizeButton {
+    -fx-graphic: url(minimizeButton.png);
+}
+
+.toolboxBottomRightButtonLogo{
+    -fx-graphic: url(toolboxLogo.png);
+}
+
+.passwordCaseChooserButton {
+    -fx-graphic: url(passwordSpace.png);
+}
+
+.passwordCaseStarterButton {
+    -fx-graphic: url(passwordSpaceStart.png);
+    -fx-background-color:transparent;
+}
+
+
+.soundAnalyzerChooserButton {
+    -fx-graphic: url(soundAnalyzer.png);
+}
+
+.soundAnalyzerStarterButton {
+    -fx-graphic: url(soundAnalyzerStart.png);
+}
+
+
+.addAppButton {
+    -fx-graphic: url(addApp.png);
+}
+
+.buttonJFX
+{
+    -fx-background-color: linear-gradient(to bottom left, #70094f,  #b81484);
+}
+
+.text-input
+{
+    -fx-text-fill : #fff;
+}
